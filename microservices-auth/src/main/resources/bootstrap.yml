@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: auth
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 120.27.63.0:8848
+        username: nacos
+        password: nacos
+  profiles: #环境配置文件
+    active: dev #dev开发环境 prd生产环境
+---
+spring:
+  profiles: dev
+  cloud:
+    nacos:
+      config:
+        namespace: 445b9acd-6467-4bc7-8208-21536847a6bc
+---
+spring:
+  profiles: prd
+  cloud:
+    nacos:
+      config:
+        namespace: e71fcbd3-dedb-405e-a520-b4cbf1d28908
