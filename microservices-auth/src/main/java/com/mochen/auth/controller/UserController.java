@@ -1,6 +1,7 @@
 package com.mochen.auth.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mochen.auth.entity.dto.LoginDTO;
 import com.mochen.auth.entity.vo.LoginVO;
 import com.mochen.auth.entity.xdo.UserDO;
@@ -8,6 +9,7 @@ import com.mochen.auth.mapper.UserMapper;
 import com.mochen.auth.service.IUserService;
 import com.mochen.core.common.xbo.Result;
 import com.mochen.core.exception.CommonException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -45,8 +47,9 @@ public class UserController {
     }
 
     @GetMapping("/getUserList")
+    @PreAuthorize("hasAuthority('teacher')")
     public Result getUserList(){
-        List<UserDO> userDOS = userMapper.selectList(null);
+        List<UserDO> userDOS = userMapper.selectList(new QueryWrapper<UserDO>().eq("school_id","1487306021557899264"));
         return Result.success(userDOS);
     }
 

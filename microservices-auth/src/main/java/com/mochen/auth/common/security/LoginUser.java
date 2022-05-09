@@ -30,8 +30,6 @@ public class LoginUser implements UserDetails {
     }
 
 
-
-
     //存储SpringSecurity所需要的权限信息的集合
     @JSONField(serialize = false)
     private Collection<SimpleGrantedAuthority> authorities;
