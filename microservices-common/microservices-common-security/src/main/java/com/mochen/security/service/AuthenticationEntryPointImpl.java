@@ -1,8 +1,8 @@
-package com.mochen.auth.common.security;
+package com.mochen.security.service;
 
 import com.alibaba.fastjson.JSON;
-import com.mochen.auth.common.utils.WebUtils;
 import com.mochen.core.common.xbo.Result;
+import com.mochen.security.utils.WebUtils;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.mochen.auth.common.utils;
+package com.mochen.security.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mochen.core.common.xbo.Result;

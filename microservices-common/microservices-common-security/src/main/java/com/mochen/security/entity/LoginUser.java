@@ -1,8 +1,7 @@
-package com.mochen.auth.common.security;
+package com.mochen.security.entity;
 
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.mochen.auth.entity.xdo.UserDO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
@@ -19,12 +18,12 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class LoginUser implements UserDetails {
 
-    private UserDO user;
+    private SecurityUserDO user;
 
     //存储权限信息
     private List<String> permissions;
 
-    public LoginUser(UserDO user, List<String> list) {
+    public LoginUser(SecurityUserDO user, List<String> list) {
         this.user = user;
         this.permissions = list;
     }

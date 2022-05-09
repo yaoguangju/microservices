@@ -1,6 +1,8 @@
-package com.mochen.auth.common.security;
+package com.mochen.security.filter;
 
 import com.mochen.redis.common.manager.RedisManager;
+import com.mochen.security.entity.LoginUser;
+import com.mochen.security.manager.JwtManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;

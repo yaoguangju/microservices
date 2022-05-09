@@ -1,4 +1,4 @@
-package com.mochen.auth.common.utils;
+package com.mochen.security.utils;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

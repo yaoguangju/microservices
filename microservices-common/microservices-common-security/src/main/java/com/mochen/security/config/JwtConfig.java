@@ -1,4 +1,4 @@
-package com.mochen.auth.common.config;
+package com.mochen.security.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

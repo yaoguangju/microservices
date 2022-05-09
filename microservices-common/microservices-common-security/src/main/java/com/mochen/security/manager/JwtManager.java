@@ -1,12 +1,12 @@
-package com.mochen.auth.common.security;
+package com.mochen.security.manager;
 
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import cn.hutool.jwt.signers.JWTSigner;
 import cn.hutool.jwt.signers.JWTSignerUtil;
-import com.mochen.auth.common.config.JwtConfig;
-import com.mochen.auth.common.contanst.CommonConstant;
 import com.mochen.core.exception.CommonException;
+import com.mochen.security.config.JwtConfig;
+import com.mochen.security.contanst.CommonConstant;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

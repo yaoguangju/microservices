@@ -3,6 +3,9 @@ package com.mochen.auth.common.security;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mochen.auth.entity.xdo.UserDO;
 import com.mochen.auth.mapper.UserMapper;
+import com.mochen.security.entity.LoginUser;
+import com.mochen.security.entity.SecurityUserDO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -40,13 +43,14 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         QueryWrapper<UserDO> wrapper = new QueryWrapper<>();
-        UserDO userDO = new UserDO();
+        UserDO userDO;
         wrapper.eq("phone", username);
         userDO = userMapper.selectOne(wrapper);
         //TODO 根据用户查询权限信息 添加到LoginUser中
         List<String> list = new ArrayList<>(Collections.singletonList(userDO.getRole()));
-
-        return new LoginUser(userDO,list);
+        SecurityUserDO securityUserDO = new SecurityUserDO();
+        BeanUtils.copyProperties(userDO,securityUserDO);
+        return new LoginUser(securityUserDO,list);
 
     }
 

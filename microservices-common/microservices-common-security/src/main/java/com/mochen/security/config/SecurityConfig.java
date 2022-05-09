@@ -1,8 +1,8 @@
-package com.mochen.auth.common.config;
+package com.mochen.security.config;
 
 
 
-import com.mochen.auth.common.security.JwtAuthenticationTokenFilter;
+import com.mochen.security.filter.JwtAuthenticationTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -50,6 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             // 对于登录接口 允许匿名访问(不加权限)
             .antMatchers("/user/login").anonymous()
+            .antMatchers("/auth/user/login").anonymous()
             // 除上面外的所有请求全部需要鉴权认证
             .anyRequest().authenticated();
 

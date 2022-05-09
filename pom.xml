@@ -20,6 +20,7 @@
         <module>microservices-common</module>
         <module>microservices-auth</module>
         <module>microservices-gateway</module>
+        <module>microservices-tutor</module>
     </modules>
 
     <properties>

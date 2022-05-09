@@ -49,7 +49,8 @@ public class UserController {
     @GetMapping("/getUserList")
     @PreAuthorize("hasAuthority('teacher')")
     public Result getUserList(){
-        List<UserDO> userDOS = userMapper.selectList(new QueryWrapper<UserDO>().eq("school_id","1487306021557899264"));
+        List<UserDO> userDOS = userMapper.selectList(new QueryWrapper<UserDO>()
+                .eq("school_id","1487306021557899264"));
         return Result.success(userDOS);
     }
 
