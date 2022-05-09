@@ -1,5 +1,4 @@
-package com.mochen.web.common.exception;
-
+package com.mochen.core.exception;
 
 import com.mochen.core.common.enums.ExceptionEnum;
 import lombok.Getter;

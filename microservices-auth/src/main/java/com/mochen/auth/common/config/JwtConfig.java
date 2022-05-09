@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RefreshScope
 public class JwtConfig {
-    @Value("${jwt.secret}")
+    @Value("${customize.jwt.secret}")
     private String jwtSecret;
 }

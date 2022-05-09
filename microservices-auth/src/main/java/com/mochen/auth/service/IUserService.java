@@ -1,5 +1,7 @@
 package com.mochen.auth.service;
 
+import com.mochen.auth.entity.dto.LoginDTO;
+import com.mochen.auth.entity.vo.LoginVO;
 import com.mochen.auth.entity.xdo.UserDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<UserDO> {
 
+    LoginVO login(LoginDTO loginDTO);
+
+    void logout();
 }

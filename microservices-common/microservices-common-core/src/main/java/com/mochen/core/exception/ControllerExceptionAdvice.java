@@ -1,9 +1,8 @@
-package com.mochen.web.common.exception;
+package com.mochen.core.exception;
 
 
 import com.mochen.core.common.enums.ExceptionEnum;
 import com.mochen.core.common.xbo.Result;
-import com.mochen.core.exception.CommonException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -20,7 +19,7 @@ import java.util.List;
 @ControllerAdvice
 public class ControllerExceptionAdvice {
 
-    @ExceptionHandler(value = com.mochen.core.exception.CommonException.class)
+    @ExceptionHandler(value =CommonException.class)
     @ResponseBody
     public Result commonExceptionHandler(CommonException e){
         return new Result(e.getCode(), e.getMessage());
