@@ -1,7 +1,7 @@
 package com.mochen.auth.mapper;
 
-import com.mochen.auth.entity.xdo.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mochen.auth.entity.xdo.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

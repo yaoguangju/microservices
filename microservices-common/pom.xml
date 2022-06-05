@@ -18,5 +18,6 @@
         <module>microservices-common-mybatis</module>
         <module>microservices-common-redis</module>
         <module>microservices-common-security</module>
+        <module>microservices-common-dubbo</module>
     </modules>
 </project>
