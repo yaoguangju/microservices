@@ -15,4 +15,9 @@ public class TestController {
     public String test() {
         return testService.test("echo");
     }
+
+    @GetMapping("/test1")
+    public String test1() {
+        return "124321";
+    }
 }
