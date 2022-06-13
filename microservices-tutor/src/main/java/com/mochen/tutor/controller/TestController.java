@@ -1,5 +1,6 @@
 package com.mochen.tutor.controller;
 
+import com.mochen.core.common.xbo.Result;
 import com.mochen.dubbo.auth.TestService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class TestController {
     }
 
     @GetMapping("/test1")
-    public String test1() {
-        return "124321";
+    public Result test1() {
+        return Result.success("124321");
     }
 }

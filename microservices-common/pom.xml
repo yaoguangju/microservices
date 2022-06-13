@@ -19,5 +19,6 @@
         <module>microservices-common-redis</module>
         <module>microservices-common-security</module>
         <module>microservices-common-dubbo</module>
+        <module>microservices-common-sentinel</module>
     </modules>
 </project>

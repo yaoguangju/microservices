@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservices-common-dubbo</artifactId>
+    <artifactId>microservices-common-sentinel</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,10 +17,19 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>com.mochen</groupId>
+            <artifactId>microservices-common-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--服务流控-->
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

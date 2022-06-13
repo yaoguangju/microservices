@@ -15,7 +15,8 @@ public enum ExceptionEnum {
     // 通用异常
     PARAM_ERROR(40000,"参数错误异常"),
     UNIFIED_EXCEPTION(50000,"统一异常"),
-    OPEN_FEIGN_ERROR(50001, "openFeign调用失败"),
+    OPEN_FEIGN_ERROR(50001, "dubbo调用失败"),
+    INTERFACE_CURRENT_LIMIT(50002, "接口已被限流"),
     SYSTEM_EXCEPTION(99999, "通用异常");
 
 
